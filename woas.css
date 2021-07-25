@@ -1,0 +1,773 @@
+/*******************************
+ | CRITICAL LAYOUT/DISPLAY CSS |
+ | ALTERATION CAN BREAK LAYOUT |
+ | EVEN BY CHANGING THE ORDER  |
+ ******************************/
+
+/* hidden layout */
+.woas_hide, #loading_overlay, #woas_wait_text, #woas_pwd_mask,
+#woas_custom_accesskeys {
+	display: none
+}
+
+/* general layout design */
+
+/* a quick browser CSS reset - consider '* {' as better suited */
+body, div, textarea, pre, ul, ol, li {
+	margin: 0px;
+	padding: 0px;
+	border-width: 0px
+}
+#woas_header_wrap {
+	width: 100%;
+	z-index: 1
+}
+#woas_footer_wrap, #woas_page_wrap {
+	margin-left: 13em; /* to match menu wrap */
+}
+.woas_edit #woas_footer_wrap {
+	margin-left: 0em
+}
+#woas_menu_wrap {
+	width: 13em; /* to match page and footer wrap */
+	_float: left; /* for IE6 */
+}
+#woas_header_wrap, #woas_menu_wrap {
+	position: absolute
+}
+.woas_fix_m #woas_menu_wrap, .woas_fix_h #woas_header_wrap {
+	position: fixed;
+	_position: absolute; /* IE6 can't do fixed */
+}
+#woas_pwd_mask {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 100
+}
+#woas_page {
+	position: relative
+}
+
+/* control disabling of navbar icons (or text if no images) */
+
+.woas_no_back #woas_back, .woas_no_fwd #woas_fwd, .woas_no_home #woas_home,
+.woas_no_tools #woas_tools, .woas_no_edit #woas_edit,
+.woas_no_lock #woas_lock, .woas_no_lock #woas_unlock,
+.woas_no_debug #woas_debug {
+	display: inline-block; /* IE 6-8 needs this for filter to work */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=15)"; /* IE8 */
+	*filter: alpha(opacity=15); /* IE 6/7 */
+	opacity: .15; /* all others, including IE9 */
+	cursor: default;
+	*text-decoration: none; /* for ie7 */
+}
+
+/* select images or text for display */
+/* LOOK AT MAKING THESE MORE EFFICIENT by using IDs instead - though dynamic
+   creation of controls completely removes need for this ... coming soon */
+
+.woas_nav a span, .woas_no_img .woas_nav img, .woas_no_img img.woas_nav,
+.woas_no_img #woas_debug img, .woas_no_img #woas_top img,
+#woas_menu_edit img, #woas_debug span, #woas_top span {
+	display: none
+}
+.woas_no_img .woas_nav a span, .woas_no_img #woas_debug span,
+.woas_no_img #woas_top span, #woas_menu_edit span {
+	display: inline
+}
+
+/* control read-only and locks */
+
+.woas_locked #woas_unlock {
+	display: inline
+}
+.woas_ro #woas_edit, .woas_ro #woas_lock, .woas_ro #woas_unlock,
+.woas_ro #woas_menu_edit,
+.woas_locked #woas_lock, .woas_unlocked #woas_unlock {
+	display: none
+}
+
+/* control overall display */
+
+.woas_view #woas_edit_mode, .woas_view #woas_edit_wrap,
+.woas_edit #woas_view_mode, .woas_edit #woas_page_wrap, .woas_edit #woas_menu_wrap,
+.woas_pswd #woas_scroll_wrap, .woas_pswd #woas_header_wrap, .woas_wait #woas_scroll_wrap,
+.woas_no_mts #woas_mts, .woas_no_log #woas_debug_console {
+	display: none
+}
+.woas_edit #woas_edit_wrap, .woas_view #woas_page_wrap, .woas_view #woas_menu_wrap,
+.woas_pswd #woas_pwd_mask, .woas_wait #loading_overlay {
+	display: block
+}
+
+
+/*****************
+ | WOAS STYLING  |
+ | SAFE TO ALTER |
+ *****************/
+
+/*
+	All measures except borders in em because IE6 doesn't resize pixel measures properly
+	and IE9 giving some border errors with em measures; exception is 0px.
+*/
+
+/* _BROWSER RESET VALUES */
+
+ul, ol {
+	margin: .75em 0px .75em 1.25em
+}
+li {
+	padding-bottom: .125em
+}
+li ul, li ol {
+	margin: .125em 0px 0px 1.25em
+}
+/* could also add values for these reset items if needed
+div {
+}
+
+pre {
+}
+*/
+
+/* BACKGROUND */
+
+.woas_background, body {
+	background-color: #335; /* no color name */
+}
+
+/* BODY */
+body {
+	word-wrap: break-word;
+	font-family: Georgia, verdana;
+	text-align: left
+}
+
+/* BUTTONS */
+.woas_button, .woas_button_top, .woas_button_editor,
+.woas_button_menu, .woas_button_ro {
+	background-color: #F0F0F5; /* matches header */
+	border: 1px solid #808080; /* grey */
+	color: #00008b; /* darkblue */
+	cursor: pointer;
+	font-variant: normal;
+	margin-top: .438em;
+	text-align: center
+}
+.woas_button:hover, .woas_button_top:hover, .woas_button_editor:hover,
+.woas_button_menu:hover, .woas_button_ro:hover {
+	background-color: #A9A9A9; /* darkgrey */
+}
+.woas_button_editor {
+	margin: .25em 0px 0px 0px;
+	padding-left: .188em;
+	padding-right: .188em;
+}
+.woas_button_top {
+	position: relative;
+	float: right;
+	margin: .5em
+}
+.woas_button_ro {
+	margin-left: -1.25em;
+	background-color: #FFF0F0
+}
+.woas_button_menu {
+	margin-top: 0.438em;
+	width: 100%
+}
+
+/* CONTENT (page layout) */
+#woas_content {
+	padding: .75em
+}
+
+/* DEBUG CONSOLE */
+#woas_debug_log_container {
+	border: 1px solid #000; /* black */
+	background-color: #F0F0F5; /* matches header */
+	margin-top: .375em; /* matches woas_footer padding-bottom */
+	padding: .25em 0em .25em .375em
+}
+
+/* textarea cannot contain padding/margins for cross-browser */
+#woas_debug_log {
+	width: 100%;
+	background-color: #F0F0F5; /* matches header */
+	resize: vertical;
+	overflow: auto;
+	overflow-x: hidden; /* for IE */
+}
+#woas_debug_log_clear {
+	margin: .375em 0px 0px
+}
+
+/* EDITOR */
+/* no padding/margins/borders in woas_editor textarea for x-browser */
+#woas_editor {
+	width: 100%;
+	resize: vertical;
+	overflow: auto;
+	*overflow-x: hidden; /* for IE 6/7 */
+	outline: none; /* Webkit (Chrome, Safari, etc.) */
+	font-size: 100%
+}
+#woas_editor_container {
+	background-color: #fff; /* white */
+	border: 1px solid #000; /* black */
+	margin-top: 0.5em;
+	/* a little spacing for the text */
+	padding: 0.5em 0px 0.5em 0.5em
+}
+.woas_editor_link, #woas_edit_wrap{
+	color: #F0F0F5; /* same as header */
+}
+
+/* EXPORT (at end of CSS) */
+
+/* FOOTER */
+#woas_footer {
+	*position: relative;
+	border: 1px solid #F0F0F5; /* same as header */
+	margin-top: 0.75em;
+	padding: .375em
+}
+#woas_footer a {
+	font-size: .688em;
+	font-weight: bold;
+	color: #F0F0F5; /* same as header */
+}
+#woas_footer_panel {
+	position: relative;
+	width: 100%;
+	line-height: 1em
+}
+#woas_about, #woas_debug, #woas_top {
+	position: absolute
+}
+#woas_about {
+	width: 100%;
+	text-align: center
+}
+#woas_debug {
+	left: 0px
+}
+#woas_top {
+	right: 0px
+}
+
+/* HEADINGS */
+/* (PVHL: do we really need woas_heading style? Not using so x-browser better) */
+h1, h2, h3, h4, h5, h6 {
+	margin: .75em 0px .325em;
+	padding: 0px
+}
+/* this misses IE6 */
+h1:first-child, #woas_toc + h1, h2:first-child, #woas_toc + h2,
+h3:first-child, #woas_toc + h3, h1 + h2, h2 + h3, h3 + h4 {
+	margin-top: 0px
+}
+h1 {
+	font-size: 1.438em
+}
+h2 {
+	font-size: 1.25em
+}
+h3 {
+	font-size: 1.063em
+}
+h4 {
+	font-size: 0.875em
+}
+h5 {
+	font-size: 0.75em
+}
+h6 {
+	font-size: 0.625em
+}
+
+/* HELP PAGES */
+/* PVHL: this should be in a separate page, like WoaS::CSS::Help */
+/*
+next three are for layout; no changes allowed except colors;
+wraps cannot contain margins, paddings, or borders
+*/
+.woas_help {
+	border-width: 0px;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #fff; /* white */
+}
+#woas_help_top_wrap {
+	width: 100%
+}
+#woas_help_body_wrap {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	overflow: auto;
+	_overflow-x: hidden; /* helps IE6; gets overflow:auto wrong sometimes */
+}
+
+/* end of Help layout CSS; rest can be styled */
+
+#woas_help_body {
+	background-color: #FFF; /* white */
+	padding: 1em
+}
+#woas_help_body ol li {
+	margin-bottom: .5em
+}
+.woas_help_top {
+	background-color: #335; /* matches wiki background */
+	color: #F0F0F5; /* matches wiki header */
+	font-family: Arial Black, Gadget, sans-serif;
+	font-size: 1.5em;
+	padding: .625em .625em 1em
+}
+.woas_help h3 {
+	margin-bottom: .188em
+}
+/*
+explicit margins are needed for IE6/7 otherwise collapsed under certain circumstances.
+*/
+.woas_help h1 {
+	margin: .5em 0px .25em
+}
+.woas_help_button {
+	float: right;
+	margin-left: .625em;
+	background-color: #F0F0F5; /* matches background */
+	border: 1px solid #808080; /* grey */
+	color: #00008b; /* darkblue */
+	cursor: pointer
+}
+.woas_help_button:hover {
+	background-color: #A9A9A9; /* darkgrey */
+}
+.woas_help_code {
+	font-family: monospace;
+	padding: 0.5em
+}
+.woas_help_text {
+	font-family: lucida;
+	color: #048db4;
+	font-weight: bold
+}
+
+/* IMAGE GALLERY */
+a.woas_img_list, .woas_img_list_first, .woas_img_list_last, .woas_img_list_single {
+	display: block;
+	padding-bottom: .75em;
+	padding-top: 1em;
+}
+a.woas_img_list:hover, .woas_img_list_first:hover, .woas_img_list_last:hover,
+.woas_img_list_single:hover {
+	background-color: #efe;
+	margin-left: -1em; /* same as woas_page padding */
+	margin-right: -1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	text-decoration: none;
+}
+img.woas_img_list {
+	display: block;
+	margin-bottom: .625em;
+	padding: .5em;
+	background-color: #afa
+}
+
+/* INPUT LAYOUT */
+.woas_input_wrap {
+	margin-top: .75em;
+	padding: .625em .625em .625em 1.875em;
+	border: 2px solid #F0F0F5; /* matches header */
+	text-align: left
+}
+.woas_input_wrap legend {
+	font-size: 1.188em;
+	font-weight: bold
+}
+.woas_input_wrap label input, .woas_input_wrap label select {
+	margin: 0px .434em .313em -1.25em
+}
+.woas_input_wrap label input {
+	vertical-align: -0.063em
+}
+.woas_input_wrap .woas_input_wrap_inline {
+	margin-left: .625em
+}
+.woas_input_wrap .woas_input_wrap_no_left {
+	margin-left: 0px
+}
+.woas_input_wrap .woas_input_wrap_left {
+	margin: 0px 0px .313em -1.25em
+}
+
+/* LAST MODIFIED TIMESTAMP */
+#woas_mts {
+	margin-top: 0.75em;
+	color: #F0F0F5; /* same as header */
+	font-size: small;
+}
+
+/* LINK */
+a {
+	cursor: pointer
+}
+a:hover {
+	text-decoration: underline
+}
+
+/* LINK - EXTERNAL */
+.woas_world_link {
+	color: #006400; /* darkgreen */
+	text-decoration: underline
+}
+
+/* LINK - NO PAGE */
+.woas_unlink {
+	color: #f00; /* red */
+}
+
+/* LINK - PAGE */
+.woas_link {
+	color: #00f; /* blue */
+}
+
+/* LOCKED PAGE */
+.woas_locked #woas_page {
+	/* can contain a border */
+	border: 2px solid #f00;
+}
+
+/* MAIN TEXT AREA */
+#woas_page {/* main text area */
+	overflow: hidden;
+	margin-bottom: 0.75em;
+	background-color: #fff; /* white */
+	border: 1px solid #000; /* black */
+	padding: 1em
+}
+
+/* MENU */
+/*
+Add the following CSS to WoaS::Custom::CSS to allow an image icon for edit
+instead of the current text icon. I find the text less distracting.
+
+.woas_no_img #woas_menu_edit img, #woas_menu_edit span {
+	display: none
+}
+.woas_no_img #woas_menu_edit span, #woas_menu_edit img {
+	display: inline
+}
+
+*/
+#woas_menu_pad {
+	margin-right: 1.25em;
+	background-color: #fff; /* white */
+	border: 1px solid #000; /* black */
+	font-size: .75em;
+	padding: 1em
+}
+#woas_menu_edit {
+	font-size: .833em;
+	float: right;
+	margin: -0.25em -0.75em 0px 0.25em;
+}
+#woas_menu_edit img {
+	margin-top: -.5em;
+	background-color: none; /* remove temporary IE8 background */
+}
+
+/* MONOSPACED TEXT (except search) */
+pre {
+	white-space: pre-wrap; /* CSS 3 */
+}
+.woas_core_page, .woas_nowiki_multiline {
+	border: 1px solid #808080; /* grey */
+}
+.woas_core_page {
+	background-color: #F0F0F5; /* same as header */
+}
+.woas_core_page, .woas_embedded {
+	padding: 1.25em
+}
+.woas_embedded {
+	background-color: #9E9EFF
+}
+.woas_nowiki {
+	padding: 0px 0.25em
+}
+.woas_nowiki, .woas_nowiki_multiline {
+	background-color: #F5F5F5
+}
+.woas_nowiki_multiline {
+	margin: 1em 0px;
+	padding: .5em
+}
+
+/* NAVIGATION BAR */
+.woas_nav img, /* temporary CSS to fix IE8 icon opacity display */
+#woas_header_wrap {
+	background-color: #F0F0F5; /* no color name */
+}
+#woas_header {
+	padding: 0.75em
+}
+.woas_fix_h #woas_header {
+	border-bottom: 1px solid #fff; /* white */
+}
+.woas_edit #woas_header {
+	border-width: 0px
+}
+#woas_title {
+	line-height: 1;
+	font-size: 1.813em;
+	font-weight: bold;
+	margin-right: .188em;
+	text-shadow: #888 0.125em 0.125em 0.065em
+}
+div.woas_nav { /* navbar icon/text link container */
+	float: right;
+	margin-top: .188em
+}
+.woas_nav a { /* navbar links */
+}
+.woas_nav a span { /* no-image text */
+	font-weight: bold;
+	font-size: 70%
+}
+img.woas_nav { /* woas logo */
+	float: left;
+	margin-right: .375em
+}
+
+/* NOTE MACRO & TEMPLATE::INFO */
+.woas_note { /* could be multiples, so use class */
+	display: inline-block;
+	background: #FFFFAA url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADtElEQVR42rWWXUxbZRjHBwx0G9go7GJixCXDLQZZjEa9W4yKi04vtnhlsrg4E5Mp2TQu0cyZuESNEmVENseYQNduKx+FApWuUEopLYwPoRvQscGAjrFCP2gpbWkL/HzTxCszOMnYkzwX5+Sc/+99/89z3udsmC/4/pGmpIdEIJLULamkp2ew6fFN/HfvoQAi2Lx5C4c+Pky1qharuQerqZcGdTMFP//BG3veJjExcVXQquK7c3fTaelmKQrhYIQ5r5+Z+27GRhz0dg5hMdr48YdCnnoy/YGQB4rn5LyIY+IerMBCYCGec3N+XDOeOOT6P3a0dW0YdD2cLigjLVUWh0gCbNyYjKHZxHJshXAozPLSMpHFCPPzC7hdXmadbm70j6DXWlCr9DSqLXz+2TfSACI4sP9DAr4wft+8EI4Si8VYDC+K6wAe9xxTDidd5gFamqzUVbVyqVyLvFTL9qzsOGRNQHFRCf65oPDcRyi4QCQSEDuZx+/34xE7uGUfxT50neFBG1cb24V4PVcqmtn/wUdrA0RXiFVpcTm9cTuCQR+RaFBAgoTDogazd5mcvInLNcX09BjXrF2Ul9SjuKDj6JFv1wakpKQIX7U47kyLYrrw+TxEoyFi0QihkJ9AwCNq4cXrnWFi3I6x2UzpGbUA/M2J46ekWVRyRo6tdwTH+LTYhUuIeoWoB4fDztTUbSYnbjI81I/JYEEp/P/zdBVVF5v56ovj0gD5R77G2maj3dBDf+8g43eGRYHd3HXcoq+7lxZdB/U1BhR/ablwto6zhSp0tSbe27tPGmBn9gs0aTrQVBtEr5uw9fcJ7+/hvD9Jl6WLK3IdijItZec08dWryhuplKuRPSFD8of26aF89I3dXKrQInwWfo/g8cwIWA8qRRPni9VCvBJ5iRrz1U727X0f8Z50QFJSEl/mn6RWZabmsp7BG304Jm8zIAAV5zWcK6qhRqnDrO/kk4OHJRwV/4MkkJCQwLvvHKCoQCla14Cl3Sr6vhWVXENDtQZFqZI397wl4bBbJQWErRkZtOgv4nReY2a2g9HRGtqMv/Daq7vi4usyD9pMPxFb6cbtNTJgk1NVeZJt29LIzXllfQDmjkJCi114fe0M2y/ToDnF9ufS2bUzd30ArcbfWcKGP2BhdKwao+FXduzYyvPZOesD6O75jUCwHZfHRIuhmO9OHEQme4yXX3r94QFpaWkkJ2/g6cwMlEoFeXl5CChZWc9KmsmSMzPzGdG68RnMsWNHkfpX8UjzX78dQm6UDc/yAAAAAElFTkSuQmCC) no-repeat .5em .5em;
+	border: 1px solid #000;
+	margin: 1em 1.25em;
+	padding: .75em .75em .75em 2.5em
+}
+.woas_no_img .woas_note {
+	padding-left: .75em
+}
+
+/* PAGE LISTINGS */
+.woas_list {
+	margin: .188em 0px .25em 1.5em
+}
+.woas_list_heading {
+	margin: .375em 0px 0px;
+	font-weight: bold
+}
+.woas_list_link {
+	color: #00008b; /* darkblue */
+}
+.woas_list_link:hover {
+	background-color: #FFFFE0; /* LightYellow */
+	text-decoration: none
+}
+
+.woas_list_options {
+	float: right;
+	padding: .188em .375em;
+	background-color: #F0F0F5; /* matches header */
+	font-size: .8em
+}
+
+/* PASSWORD (see also encryption) */
+#woas_password_desc {
+	background-color: #FAFAFB;
+	border: 1px solid #000080; /* navy */
+	margin: 0px 10%;
+	padding: 2em
+}
+/* mask should not contain borders/padding/margins */
+#woas_pwd_mask {
+	text-align: center
+}
+#woas_pwd_query {
+	position: relative;
+	margin: 0px 10%;
+	top: 10%;
+	padding-top: 1em;
+	background-color: #d6dff7;
+	border: 2px solid #666666
+}
+
+/* PRINT  (at end of CSS) */
+
+/* SEARCH */
+#woas_search_results {
+	padding-top: 1.5em
+}
+.woas_search_results {
+	font-family: "Courier New", Courier, monospace;
+	background-color: #f9f9f9;
+	border: 1px solid #aaa;
+	clear: both;
+	padding: 0.313em;
+	margin: .75em
+}
+.woas_search_highlight {
+	background-color: #ff0; /* yellow */
+}
+
+/* TABLE OF CONTENTS */
+#woas_toc {
+	float: right;
+	max-width: 40%;
+	margin-left: 2em;
+	margin-bottom: 1em;
+	border: 1px dashed #aaa;
+	background-color: #f9f9f9;
+	padding: .75em 1em;
+	font-size: 80%
+}
+#woas_toc_title {
+	line-height: 1em;
+	font-weight: bold;
+	text-align: center
+}
+#woas_toc_content {
+	margin-top: .75em
+}
+.woas_toc_h1, .woas_toc_h2, .woas_toc_h3,
+.woas_toc_h4, .woas_toc_h5, .woas_toc_h6 {
+	margin-top: .125em;
+	margin-bottom: .125em
+}
+.woas_toc_h2 {
+	margin-left: 1.5em
+}
+.woas_toc_h3 {
+	margin-left: 3em
+}
+.woas_toc_h4 {
+	margin-left: 4.5em
+}
+.woas_toc_h5 {
+	margin-left: 6em
+}
+.woas_toc_h6 {
+	margin-left: 7.5em
+}
+
+/* TABLES */
+#woas_page table {
+	border: 1px solid #000; /* black */
+	border-spacing: 0px
+}
+#woas_page table td {
+	border: 1px solid;
+	padding: .313em
+}
+#woas_page table caption {
+	font-style: italic;
+	font-weight: bold
+}
+
+/* TAG - CONTAINER */
+.woas_taglinks {
+	border: 1px solid #aaa;
+	margin-top: 1em;
+	overflow: auto;
+	padding: .5em 1em;
+	font-size: 80%;
+	text-align: left;
+	color: #aaa; /* matches border */
+}
+
+/* TAG - LINKS */
+.woas_taglinks > a {
+	margin: 0px;
+	padding: .125em .313em;
+	background-color: #fff; /* white */
+	color: #000; /* black */
+	text-decoration: none
+}
+.woas_taglinks > a:hover {
+	background-color: #808080; /* grey */
+	color: #fff; /* white */
+	font-weight: normal;
+	text-decoration: none
+}
+
+/* TEXT DECORATIONS (used by editor buttons, but generally available) */
+.woas_b {
+	font-weight: bold
+}
+.woas_i {
+	font-style: italic
+}
+.woas_s {
+	text-decoration: line-through
+}
+.woas_u {
+	text-decoration: underline
+}
+
+/* WIKI LOADING OVERLAY */
+#loading_overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 25%;
+	z-index: 100;
+	left: 0px;
+	top: 0px;
+	color: 	#000080; /* navy */
+	font-size: large;
+	text-align: center
+}
+
+/* WOAS MODIFIER CSS (EXPORT & PRINT)
+   (needs to be after other CSS)
+*/
+
+/* EXPORT (modifier: .woas_export) */
+.woas_export #woas_header_wrap {
+    position: static
+}
+.woas_export #woas_page {
+    margin-bottom: 0px
+}
+.woas_export #woas_menu_wrap {
+	position: relative;
+	float: left
+}
+.woas_export .woas_broken_link {
+	color: #000;
+	text-decoration: none
+}
+.woas_export .woas_link {
+	text-decoration: none
+}
+.woas_export .woas_link:hover {
+	text-decoration: underline
+}
+.woas_export_no_menu #woas_page_wrap {
+    margin-left: 0px
+}
+
+/* PRINT (modifier: .woas_print) */
+#woas_page.woas_print {
+	overflow: auto;
+	border-width: 0px;
+	padding: 0px;
+	margin: 0px
+}
+.woas_print .woas_nowiki_multiline {
+	page-break-inside: avoid
+}
+
+/* Your CSS customization goes here */
+
+.woas_broken_link { color: red; text-decoration: underline; }

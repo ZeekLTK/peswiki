@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta woas_permanent="1" http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>WoaS::Help::Lists</title><link rel="stylesheet" type="text/css" media="all" href="woas.css" /><meta name="generator" content="Wiki on a Stick v0.12.0 - http://stickwiki.sf.net/" />
+<meta name="keywords" content="li,style,list,type,ol,alpha,create,roman,ITEM,page,code,lower,upper,Test,SUBTEXT,Use,MORE,ul,item,decimal,circle,disc,none,square,can,lists,button,HTML,blockquoteITEM,blockquote,lilower,liupper,tags,text,items,ListUse,markup,SUBTEXTITEM,alphalower,alphaupper,romanlower,romanupper,inserts,wiki" />
+<meta name="description" content="Simple single-level lists can be created by using the list buttons in the editor.The * button inserts the wiki syntax for a bulleted list itemThe # button inserts the wiki syntax for a numbered list item.The @ button inserts the wiki syntax for an al" />
+<meta name="author" content="ZeekLTK" />
+</head><body class="woas_export"><div id="woas_header_wrap"><div id="woas_header"><span id="woas_title">WoaS::Help::Lists</span></div></div><div id="woas_content"><div id="woas_menu_wrap"><div id="woas_menu_pad"><div id="woas_menu"><a class="woas_link" title="" href="index.html">Main Page</a><ul><li><a class="woas_link" title="" href="timeline.html">Timeline</a></li><li><a class="woas_link" title="" href="zeekltk.html">ZeekLTK</a></li></ul><a class="woas_link" title="" href="challenge_league_season_2.html">Challenge League Season 2</a><br /><a class="woas_link" title="" href="fixtures.html">Fixtures</a><br /><ul><li><strong><a class="woas_link" title="" href="world_cup.html">World Cup</a></strong></li></ul><ul><li><strong><a class="woas_link" title="" href="challenge_league.html">Challenge League</a></strong></li></ul><ul><li><strong>Other Competitions</strong><ul><li><a class="woas_link" title="" href="confederations_cup.html">Confederations Cup</a></li><li><a class="woas_link" title="" href="euro_cup.html">Euro Cup</a></li><li><a class="woas_link" title="" href="african_cup.html">African Cup</a></li><li><a class="woas_link" title="" href="asian_cup.html">Asian Cup</a></li><li><a class="woas_link" title="" href="copa_america.html">Copa America</a></li><li><a class="woas_link" title="" href="gold_cup.html">Gold Cup</a></li><li><a class="woas_link" title="" href="world_series.html">World Series</a></li><li><a class="woas_link" title="" href="tens.html">Tens</a></li></ul></li></ul><ul><li><strong><span style="text-decoration:underline;">Teams</span></strong><ul><li><a class="woas_link" title="" href="afc.html">AFC</a></li><li><a class="woas_link" title="" href="caf.html">CAF</a></li><li><a class="woas_link" title="" href="concacaf.html">CONCACAF</a></li><li><a class="woas_link" title="" href="conmebol.html">CONMEBOL</a></li><li><a class="woas_link" title="" href="uefa.html">UEFA</a></li></ul></li></ul><ul><li><span class="woas_broken_link">Globe Cup</span></li><li><a class="woas_link" title="" href="international_league.html">International League</a></li><li><a class="woas_link" title="" href="development_cup.html">Development Cup</a></li></ul><ul><li><a class="woas_link" title="" href="records.html">Records</a></li></ul><ul><li><a class="woas_link" title="" href="world_rankings.html">World Rankings</a></li></ul><br /><input style="font-size:.75em;" id="menu_string_to_search" type="text" size="19" onkeydown="return menu_key_hook(event)" onfocus="menu_search_focus(true)" onblur="menu_search_focus(false)" />&nbsp;<input style="font-size:.75em;" class="woas_button" type="button" value="Search" onclick="menu_do_search()" /><br /><br /></div></div></div><div id="woas_page_wrap"><div id="woas_page">Simple single-level lists can be created by using the list buttons in the editor.<ul><li>The <strong><tt class="woas_nowiki">*</tt></strong> button inserts the wiki syntax for a bulleted list item</li><li>The <strong><tt class="woas_nowiki">#</tt></strong> button inserts the wiki syntax for a numbered list item.</li><li>The <strong><tt class="woas_nowiki">@</tt></strong> button inserts the wiki syntax for an alphanumeric list item.</li><li>The <strong><tt class="woas_nowiki">List</tt></strong> button wraps HTML ul tags around the selected text to create an unordered list.</li><li>The <strong><tt class="woas_nowiki">List =</tt></strong> button wraps HTML ol tags around the selected text to create an ordered list.</li><li>The <strong><tt class="woas_nowiki">li[*]</tt></strong> button wraps HTML li tags around the selected text to create a list item.</li></ul>If you'd like to create mixed lists, nested lists, or lists with additional types of list items, the methods below can be used instead.<br /><h2 class="woas_heading" id="S15602">Wiki markup lists</h2>Wiki markup lists are created with between one and five specific characters (<tt class="woas_nowiki">@</tt>, <tt class="woas_nowiki">*</tt>, or <tt class="woas_nowiki">#</tt>) at the beginning of a line, followed by a space, and then whatever text you'd like the list item to have. Each list must begin with a list item with only one character at the beginning of the line, and there can be no blank lines between entries in the list. To create a blank line beneath a list item, you can insert two HTML <tt class="woas_nowiki">&lt;br&gt;</tt> tags at the end of of the list item's text. Wiki and HTML markup are accepted in list items.<br /><h3 class="woas_heading" id="S15128">Alphanumeric List</h3><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">@ Test
+@ Test
+@ Test
+@@ Test
+@@@ Test
+@@@@ Test
+@ Test
+@ Test</pre><br><div class="woas_help_text">To create this:</div><ol type="a"><li>Test</li><li>Test</li><li>Test<ol type="a"><li>Test<ol type="a"><li>Test<ol type="a"><li>Test</li></ol></li></ol></li></ol></li><li>Test</li><li>Test</li></ol><h3 class="woas_heading" id="S8855">Bulleted List</h3><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">* Test
+* Test
+** Test
+*** Test
+**** Test
+* Test
+* Test</pre><br><div class="woas_help_text">To create this:</div><br><ul><li>Test</li><li>Test<ul><li>Test<ul><li>Test<ul><li>Test</li></ul></li></ul></li></ul></li><li>Test</li><li>Test</li></ul><h3 class="woas_heading" id="S5354">Fancy List</h3><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">* ITEM 1 - ITEM 1 SUBTEXT &lt;blockquote&gt;ITEM 1 MORE SUBTEXT&lt;/blockquote&gt;
+* ITEM 2 - ITEM 2 SUBTEXT &lt;blockquote&gt;ITEM 2 MORE SUBTEXT&lt;/blockquote&gt;
+* ITEM 3 - ITEM 3 SUBTEXT &lt;blockquote&gt;ITEM 3 MORE SUBTEXT&lt;/blockquote&gt;</pre><br><div class="woas_help_text">To create this:</div><br><ul><li>ITEM 1 - ITEM 1 SUBTEXT <blockquote>ITEM 1 MORE SUBTEXT</blockquote></li><li>ITEM 2 - ITEM 2 SUBTEXT <blockquote>ITEM 2 MORE SUBTEXT</blockquote></li><li>ITEM 3 - ITEM 3 SUBTEXT <blockquote>ITEM 3 MORE SUBTEXT</blockquote></li></ul><h3 class="woas_heading" id="S8818">Numbered List</h3><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline"># Test
+# Test
+## Test
+### Test
+#### Test
+# Test
+# Test</pre><br><div class="woas_help_text">To create this:</div><br><ol><li>Test</li><li>Test<ol><li>Test<ol><li>Test<ol><li>Test</li></ol></li></ol></li></ol></li><li>Test</li><li>Test</li></ol><h3 class="woas_heading" id="S17838">Numbered Fancy List</h3><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline"># ITEM 1 - ITEM 1 SUBTEXT &lt;blockquote&gt;ITEM 1 MORE SUBTEXT&lt;/blockquote&gt;
+# ITEM 2 - ITEM 2 SUBTEXT &lt;blockquote&gt;ITEM 2 MORE SUBTEXT&lt;/blockquote&gt;
+# ITEM 3 - ITEM 3 SUBTEXT &lt;blockquote&gt;ITEM 3 MORE SUBTEXT&lt;/blockquote&gt;</pre><br><div class="woas_help_text">To create this:</div><br><ol><li>ITEM 1 - ITEM 1 SUBTEXT <blockquote>ITEM 1 MORE SUBTEXT</blockquote></li><li>ITEM 2 - ITEM 2 SUBTEXT <blockquote>ITEM 2 MORE SUBTEXT</blockquote></li><li>ITEM 3 - ITEM 3 SUBTEXT <blockquote>ITEM 3 MORE SUBTEXT</blockquote></li></ol><h2 class="woas_heading" id="S5240">HTML Lists</h2>HTML lists work the same way as they do in any web page. Specifying the list type can be done in the <tt class="woas_nowiki">&lt;ol&gt;</tt>, <tt class="woas_nowiki">&lt;ul&gt;</tt>, or <tt class="woas_nowiki">&lt;li&gt;</tt> tags, depending on how you need to use them. Wiki markup is accepted in list items.<br /><h3 class="woas_heading" id="S79454">Specifying list type in the &lt;ol&gt; tag</h3>This method is useful when an entire list will use one list item type. This way you only need to specify the type once, and all the list items can be entered normally.<br /><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol style="list-style-type:lower-alpha;"&gt;
+&lt;li&gt;lower-alpha&lt;/li&gt;
+&lt;li&gt;lower-alpha&lt;/li&gt;
+&lt;li&gt;lower-alpha&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol style="list-style-type:lower-alpha;"><li>lower-alpha</li><li>lower-alpha</li><li>lower-alpha</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol style="list-style-type:upper-alpha;"&gt;
+&lt;li&gt;upper-alpha&lt;/li&gt;
+&lt;li&gt;upper-alpha&lt;/li&gt;
+&lt;li&gt;upper-alpha&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol style="list-style-type:upper-alpha;"><li>upper-alpha</li><li>upper-alpha</li><li>upper-alpha</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol style="list-style-type:decimal;"&gt;
+&lt;li&gt;decimal&lt;/li&gt;
+&lt;li&gt;decimal&lt;/li&gt;
+&lt;li&gt;decimal&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol style="list-style-type:decimal;"><li>decimal</li><li>decimal</li><li>decimal</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol style="list-style-type:lower-roman;"&gt;
+&lt;li&gt;lower-roman&lt;/li&gt;
+&lt;li&gt;lower-roman&lt;/li&gt;
+&lt;li&gt;lower-roman&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol style="list-style-type:lower-roman;"><li>lower-roman</li><li>lower-roman</li><li>lower-roman</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol style="list-style-type:upper-roman;"&gt;
+&lt;li&gt;upper-roman&lt;/li&gt;
+&lt;li&gt;upper-roman&lt;/li&gt;
+&lt;li&gt;upper-roman&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol style="list-style-type:upper-roman;"><li>upper-roman</li><li>upper-roman</li><li>upper-roman</li></ol><h3 class="woas_heading" id="S79652">Specifying list type in the &lt;ul&gt; tag</h3>This method is useful when an entire list will use one list item type. This way you only need to specify the type once, and all the list items can be entered normally.<br /><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ul style="list-style-type:circle;"&gt;
+&lt;li&gt;circle&lt;/li&gt;
+&lt;li&gt;circle&lt;/li&gt;
+&lt;li&gt;circle&lt;/li&gt;
+&lt;/ul&gt;</pre><br><div class="woas_help_text">To create this:</div><ul style="list-style-type:circle;"><li>circle</li><li>circle</li><li>circle</li></ul><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ul style="list-style-type:disc;"&gt;
+&lt;li&gt;disc&lt;/li&gt;
+&lt;li&gt;disc&lt;/li&gt;
+&lt;li&gt;disc&lt;/li&gt;
+&lt;/ul&gt;</pre><br><div class="woas_help_text">To create this:</div><ul style="list-style-type:disc;"><li>disc</li><li>disc</li><li>disc</li></ul><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ul style="list-style-type:none;"&gt;
+&lt;li&gt;none&lt;/li&gt;
+&lt;li&gt;none&lt;/li&gt;
+&lt;li&gt;none&lt;/li&gt;
+&lt;/ul&gt;</pre><br><div class="woas_help_text">To create this:</div><ul style="list-style-type:none;"><li>none</li><li>none</li><li>none</li></ul><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ul style="list-style-type:square;"&gt;
+&lt;li&gt;square&lt;/li&gt;
+&lt;li&gt;square&lt;/li&gt;
+&lt;li&gt;square&lt;/li&gt;
+&lt;/ul&gt;</pre><br><div class="woas_help_text">To create this:</div><ul style="list-style-type:square;"><li>square</li><li>square</li><li>square</li></ul><h3 class="woas_heading" id="S79253">Specifying list type in the &lt;li&gt; tag</h3>This method is useful when creating a fancy list with more than one list item type.<br /><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:lower-alpha;"&gt;lower-alpha&lt;/li&gt;
+&lt;li style="list-style-type:lower-alpha;"&gt;lower-alpha&lt;/li&gt;
+&lt;li style="list-style-type:lower-alpha;"&gt;lower-alpha&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:lower-alpha;">lower-alpha</li><li style="list-style-type:lower-alpha;">lower-alpha</li><li style="list-style-type:lower-alpha;">lower-alpha</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:upper-alpha;"&gt;upper-alpha&lt;/li&gt;
+&lt;li style="list-style-type:upper-alpha;"&gt;upper-alpha&lt;/li&gt;
+&lt;li style="list-style-type:upper-alpha;"&gt;upper-alpha&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:upper-alpha;">upper-alpha</li><li style="list-style-type:upper-alpha;">upper-alpha</li><li style="list-style-type:upper-alpha;">upper-alpha</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:circle;"&gt;circle&lt;/li&gt;
+&lt;li style="list-style-type:circle;"&gt;circle&lt;/li&gt;
+&lt;li style="list-style-type:circle;"&gt;circle&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:circle;">circle</li><li style="list-style-type:circle;">circle</li><li style="list-style-type:circle;">circle</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:decimal;"&gt;decimal&lt;/li&gt;
+&lt;li style="list-style-type:decimal;"&gt;decimal&lt;/li&gt;
+&lt;li style="list-style-type:decimal;"&gt;decimal&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:decimal;">decimal</li><li style="list-style-type:decimal;">decimal</li><li style="list-style-type:decimal;">decimal</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:disc;"&gt;disc&lt;/li&gt;
+&lt;li style="list-style-type:disc;"&gt;disc&lt;/li&gt;
+&lt;li style="list-style-type:disc;"&gt;disc&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:disc;">disc</li><li style="list-style-type:disc;">disc</li><li style="list-style-type:disc;">disc</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:lower-roman;"&gt;lower-roman&lt;/li&gt;
+&lt;li style="list-style-type:lower-roman;"&gt;lower-roman&lt;/li&gt;
+&lt;li style="list-style-type:lower-roman;"&gt;lower-roman&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:lower-roman;">lower-roman</li><li style="list-style-type:lower-roman;">lower-roman</li><li style="list-style-type:lower-roman;">lower-roman</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:none;"&gt;none&lt;/li&gt;
+&lt;li style="list-style-type:none;"&gt;none&lt;/li&gt;
+&lt;li style="list-style-type:none;"&gt;none&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:none;">none</li><li style="list-style-type:none;">none</li><li style="list-style-type:none;">none</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:square;"&gt;square&lt;/li&gt;
+&lt;li style="list-style-type:square;"&gt;square&lt;/li&gt;
+&lt;li style="list-style-type:square;"&gt;square&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:square;">square</li><li style="list-style-type:square;">square</li><li style="list-style-type:square;">square</li></ol><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:upper-roman;"&gt;upper-roman&lt;/li&gt;
+&lt;li style="list-style-type:upper-roman;"&gt;upper-roman&lt;/li&gt;
+&lt;li style="list-style-type:upper-roman;"&gt;upper-roman&lt;/li&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:upper-roman;">upper-roman</li><li style="list-style-type:upper-roman;">upper-roman</li><li style="list-style-type:upper-roman;">upper-roman</li></ol><h3 class="woas_heading" id="S10735">Mixed HTML list</h3><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">&lt;ol&gt;
+&lt;li style="list-style-type:lower-alpha;"&gt;lower-alpha&lt;/li&gt;
+   &lt;ol&gt;
+   &lt;li style="list-style-type:upper-alpha;"&gt;upper-alpha&lt;/li&gt;
+      &lt;ol&gt;
+      &lt;li style="list-style-type:circle;"&gt;circle&lt;/li&gt;
+         &lt;ol&gt;
+         &lt;li style="list-style-type:decimal;"&gt;decimal&lt;/li&gt;
+            &lt;ol&gt;
+            &lt;li style="list-style-type:disc;"&gt;disc&lt;/li&gt;
+               &lt;ol&gt;
+               &lt;li style="list-style-type:lower-roman;"&gt;lower-roman&lt;/li&gt;
+                  &lt;ol&gt;
+                  &lt;li style="list-style-type:none;"&gt;none&lt;/li&gt;
+                     &lt;ol&gt;
+                     &lt;li style="list-style-type:square;"&gt;square&lt;/li&gt;
+                        &lt;ol&gt;
+                        &lt;li style="list-style-type:upper-roman;"&gt;upper-roman&lt;/li&gt;
+                        &lt;/ol&gt;
+                     &lt;/ol&gt;
+                  &lt;/ol&gt;
+               &lt;/ol&gt;
+            &lt;/ol&gt;
+         &lt;/ol&gt;
+      &lt;/ol&gt;
+   &lt;/ol&gt;
+&lt;/ol&gt;</pre><br><div class="woas_help_text">To create this:</div><ol><li style="list-style-type:lower-alpha;">lower-alpha</li>   <ol>   <li style="list-style-type:upper-alpha;">upper-alpha</li>      <ol>      <li style="list-style-type:circle;">circle</li>         <ol>         <li style="list-style-type:decimal;">decimal</li>            <ol>            <li style="list-style-type:disc;">disc</li>               <ol>               <li style="list-style-type:lower-roman;">lower-roman</li>                  <ol>                  <li style="list-style-type:none;">none</li>                     <ol>                     <li style="list-style-type:square;">square</li>                        <ol>                        <li style="list-style-type:upper-roman;">upper-roman</li>                        </ol>                     </ol>                  </ol>               </ol>            </ol>         </ol>      </ol>   </ol></ol></div></div></div></body></html>

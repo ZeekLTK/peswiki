@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta woas_permanent="1" http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>WoaS::Help::Tables</title><link rel="stylesheet" type="text/css" media="all" href="woas.css" /><meta name="generator" content="Wiki on a Stick v0.12.0 - http://stickwiki.sf.net/" />
+<meta name="keywords" content="cell,table,1cell,2cell,3cell,code,create,Use,class,Example,custom,can,mycustomtable,CSS,background,border,style,last,columns,color,used,caption,special,default,definition,CELL1,space,span,CELL2,text,before,contents,solid,tables,use,adding,td,1px,page,just,CELL3,rules,left,columnsspan,404040" />
+<meta name="description" content="Table syntaxUse this code in a page: {| | CELL1 || CELL2 | CELL1 || CELL2 |} To create this:CELL1CELL2CELL1CELL2 Or use this code in a page: {| | CELL1 || CELL2 |- | CELL1 || CELL2 |} To create this:CELL1CELL2CELL1CELL2 The line that starts with |- i" />
+<meta name="author" content="ZeekLTK" />
+</head><body class="woas_export"><div id="woas_header_wrap"><div id="woas_header"><span id="woas_title">WoaS::Help::Tables</span></div></div><div id="woas_content"><div id="woas_menu_wrap"><div id="woas_menu_pad"><div id="woas_menu"><a class="woas_link" title="" href="index.html">Main Page</a><ul><li><a class="woas_link" title="" href="timeline.html">Timeline</a></li><li><a class="woas_link" title="" href="zeekltk.html">ZeekLTK</a></li></ul><a class="woas_link" title="" href="challenge_league_season_2.html">Challenge League Season 2</a><br /><a class="woas_link" title="" href="fixtures.html">Fixtures</a><br /><ul><li><strong><a class="woas_link" title="" href="world_cup.html">World Cup</a></strong></li></ul><ul><li><strong><a class="woas_link" title="" href="challenge_league.html">Challenge League</a></strong></li></ul><ul><li><strong>Other Competitions</strong><ul><li><a class="woas_link" title="" href="confederations_cup.html">Confederations Cup</a></li><li><a class="woas_link" title="" href="euro_cup.html">Euro Cup</a></li><li><a class="woas_link" title="" href="african_cup.html">African Cup</a></li><li><a class="woas_link" title="" href="asian_cup.html">Asian Cup</a></li><li><a class="woas_link" title="" href="copa_america.html">Copa America</a></li><li><a class="woas_link" title="" href="gold_cup.html">Gold Cup</a></li><li><a class="woas_link" title="" href="world_series.html">World Series</a></li><li><a class="woas_link" title="" href="tens.html">Tens</a></li></ul></li></ul><ul><li><strong><span style="text-decoration:underline;">Teams</span></strong><ul><li><a class="woas_link" title="" href="afc.html">AFC</a></li><li><a class="woas_link" title="" href="caf.html">CAF</a></li><li><a class="woas_link" title="" href="concacaf.html">CONCACAF</a></li><li><a class="woas_link" title="" href="conmebol.html">CONMEBOL</a></li><li><a class="woas_link" title="" href="uefa.html">UEFA</a></li></ul></li></ul><ul><li><span class="woas_broken_link">Globe Cup</span></li><li><a class="woas_link" title="" href="international_league.html">International League</a></li><li><a class="woas_link" title="" href="development_cup.html">Development Cup</a></li></ul><ul><li><a class="woas_link" title="" href="records.html">Records</a></li></ul><ul><li><a class="woas_link" title="" href="world_rankings.html">World Rankings</a></li></ul><br /><input style="font-size:.75em;" id="menu_string_to_search" type="text" size="19" onkeydown="return menu_key_hook(event)" onfocus="menu_search_focus(true)" onblur="menu_search_focus(false)" />&nbsp;<input style="font-size:.75em;" class="woas_button" type="button" value="Search" onclick="menu_do_search()" /><br /><br /></div></div></div><div id="woas_page_wrap"><div id="woas_page"><h1 class="woas_heading" id="S8131">Table syntax</h1><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">{|
+| CELL1 || CELL2
+| CELL1 || CELL2
+|}</pre><br><div class="woas_help_text">To create this:</div><table class="woas_text_area" ><tr><td>CELL1</td><td>CELL2</td></tr><tr><td>CELL1</td><td>CELL2</td></tr></table><br /><div class="woas_help_text">Or use this code in a page:</div><br><pre class="woas_nowiki_multiline">{|
+| CELL1 || CELL2
+|-
+| CELL1 || CELL2
+|}</pre><br><div class="woas_help_text">To create this:</div><table class="woas_text_area" ><tr><td>CELL1</td><td>CELL2</td></tr><tr><td>CELL1</td><td>CELL2</td></tr></table><br />The line that starts with <tt class="woas_nowiki">|- </tt> is a comment line. You can type some text after it which will only be visible when viewing the source:<br /><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">{|
+| CELL1 || CELL2
+|- This is a comment.
+| CELL1 || CELL2
+|}</pre><br><div class="woas_help_text">To create this:</div><table class="woas_text_area" ><tr><td>CELL1</td><td>CELL2</td></tr><tr><td>CELL1</td><td>CELL2</td></tr></table><h2 class="woas_heading" id="S6744">Header rows</h2>Tables can have a specially formatted header row created by adding a pipe followed by a plus symbol and a space before the title text (example: <tt class="woas_nowiki">|+ Title</tt>), and can contain internal and external <a class="woas_link" title="WoaS::Help::Links" href="woas__help__links.html">wiki links</a>.<br /><br /><div class="woas_help_text">Use this code in a page:</div><br><pre class="woas_nowiki_multiline">{|
+|+ TITLE
+| *HEADER1* || *HEADER2* || *HEADER3*
+|-
+| CELL1 || CELL2 || CELL3
+|-
+| CELL1 || CELL2 || CELL3
+|-
+| CELL1 || CELL2 || CELL3
+|-
+| CELL1 || || CELL3
+|}</pre><br><div class="woas_help_text">To create this:</div><table class="woas_text_area" ><caption> TITLE</caption><tr><td><strong>HEADER1</strong></td><td><strong>HEADER2</strong></td><td><strong>HEADER3</strong></td></tr><tr><td>CELL1</td><td>CELL2</td><td>CELL3</td></tr><tr><td>CELL1</td><td>CELL2</td><td>CELL3</td></tr><tr><td>CELL1</td><td>CELL2</td><td>CELL3</td></tr><tr><td>CELL1</td><td align=right></td><td>CELL3</td></tr></table><br /><div class="woas_help_text">Or use this code in a page:</div><br><pre class="woas_nowiki_multiline">{|
+|+ TITLE
+| *HEADER1* || *HEADER2* || *HEADER3*
+| CELL1 || CELL2 || CELL3
+| CELL1 || CELL2 || CELL3
+| CELL1 || CELL2 || CELL3
+| CELL1 || || CELL3
+|}</pre><br><div class="woas_help_text">To create this:</div><table class="woas_text_area" ><caption> TITLE</caption><tr><td><strong>HEADER1</strong></td><td><strong>HEADER2</strong></td><td><strong>HEADER3</strong></td></tr><tr><td>CELL1</td><td>CELL2</td><td>CELL3</td></tr><tr><td>CELL1</td><td>CELL2</td><td>CELL3</td></tr><tr><td>CELL1</td><td>CELL2</td><td>CELL3</td></tr><tr><td>CELL1</td><td align=right></td><td>CELL3</td></tr></table><h1 class="woas_heading" id="S53507">Extended customization of layout</h1>Styling, formatting, and alignment can be used to control the look and behavior of tables. All example tables on this page use table comment lines ( <tt class="woas_nowiki">|-</tt> ) to make it easier to see what is involved in creating the tables. These lines are not necessary when creating your tables.<br /><h2 class="woas_heading" id="S64710">Add some custom CSS rules to the wiki</h2>To create a custom table defined by <a class="woas_link" title="WoaS::Help::CSS" href="woas__help__css.html">CSS</a>, add some table rules to the wiki CSS using a class name of your choosing.<ul><li><div class="woas_help_text">Use these CSS rules in your wiki, replacing CLASS_NAME with the class name you'd like to use, and CSS_RULES with the rules you'd like to define for the table, the caption, the headers, the cells, and a <span class="woas_broken_link">special cell</span>:</div><br><pre class="woas_nowiki_multiline">table.CLASS_NAME {CSS_RULES}
+caption.CLASS_NAME {CSS_RULES}
+table.CLASS_NAME th {CSS_RULES}
+table.CLASS_NAME td {CSS_RULES}
+table.CLASS_NAME td.special {CSS_RULES}</pre><br>See the <span class="woas_broken_link">custom CSS rules</span> used by the examples on this page.</li></ul><h2 class="woas_heading" id="S29193">Assign a class to a table</h2>When custom CSS rules have been added to the wiki, you can replace the default <tt class="woas_nowiki">{|</tt> table opening line with a custom one to assign the custom class to the table.<br /><br /><div class="woas_help_text">Open a table with this line of code:</div><br><pre class="woas_nowiki_multiline">{| class="CLASS_NAME"</pre><br><div class="woas_help_text">To use a custom class for the table.</div><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|} </pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|} </pre></td></tr></table><h2 class="woas_heading" id="S4843">Alignment</h2>Tables are aligned to the left by default, but alignment can be controlled by surrounding the cell contents with extra spaces or tabs. Forcing content to the left is not necessary, but it may help to use forced alignment for debugging complex tables.<br /><br /><table class="woas_text_area" ><tr><td><strong>Alignment</strong></td><td><strong>Example result</strong></td><td><strong>Effect</strong></td></tr><tr><td>{space}text{space}</td><td>text</td><td>default</td></tr><tr><td>{space}text{space}{space}</td><td>text</td><td>text is aligned to the left</td></tr><tr><td>{space}{space}text{space}</td><td align=right>text</td><td>text is aligned to the right</td></tr><tr><td>{space}{space}text{space}{space}</td><td align=center>text</td><td>text is centered</td></tr></table><h2 class="woas_heading" id="S3942">Captions</h2>Placement of the caption determines whether it's above or below the table.<br /><br /><div class="woas_help_text">Use this code in a table, replacing CAPTION with the caption of the table:</div><br><pre class="woas_nowiki_multiline">|+ CAPTION</pre><br><div class="woas_help_text">To add a caption to a table.</div><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><caption> caption above</caption><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+|+ caption above
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><caption> caption above</caption><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+|+ caption above
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><caption style="caption-side:bottom"> caption below</caption><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|+ caption below
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><caption style="caption-side:bottom"> caption below</caption><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|+ caption below
+|-
+|}</pre></td></tr></table><h2 class="woas_heading" id="S6702">Empty cells</h2>Empty cells can be created by inserting just one space after a pipe in your table.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example plain table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td align=right>&nbsp;</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td align=right></td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td align=right></td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| || cell 2 || cell 3
+|-
+| cell 1 || || cell 3
+|-
+| cell 1 || cell 2 || 
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example fancy table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><td align=right>&nbsp;</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td align=right></td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td align=right></td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| || cell 2 || cell 3
+|-
+| cell 1 || || cell 3
+|-
+| cell 1 || cell 2 || 
+|-
+|}</pre></td></tr></table><h2 class="woas_heading" id="S2959">Headers</h2>In default tables, table header cells (<tt class="woas_nowiki">&lt;th&gt;</tt>) are created by surrounding the cell content in asterisks. In custom tables, use a single <tt class="woas_nowiki">=</tt> symbol before the cell content to change the table data cell (<tt class="woas_nowiki">&lt;td&gt;</tt>) into a table header cell <tt class="woas_nowiki">&lt;th&gt;</tt>, which can be styled differently through CSS.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td><strong>cell 2</strong></td><td><strong>cell 3</strong></td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| *cell 1* || *cell 2* || *cell 3*
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><th>cell 2</th><th>cell 3</th></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| =cell 1 || =cell 2 || =cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+|}</pre></td></tr></table><br />Placement of table header cells (<tt class="woas_nowiki">&lt;th&gt;</tt>) can be anywhere in a table.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td><strong>cell 3</strong></td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| *cell 1* || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || *cell 3*
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><th>cell 3</th></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| =cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || =cell 3
+|-
+|}</pre></td></tr></table><br />To get the contents of a cell to start with an equal symbol, use an HTML comment ( <tt class="woas_nowiki">&lt;!-- --&gt;</tt> ) before the equal symbol:<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><!-- -->=cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td><!-- -->=cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| &lt;!-- --&gt;=cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || &lt;!-- --&gt;=cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><td><!-- -->=cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td>cell 2</td><td><!-- -->=cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| &lt;!-- --&gt;=cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || cell 2 || &lt;!-- --&gt;=cell 3
+|-
+|}</pre></td></tr></table><h2 class="woas_heading" id="S1613">Spans</h2>By removing all contents in a cell you can cause the content in the cell to the left or right of it to span more than one column.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td>cell 2</td><td>cell 3</td></tr><tr><td><strong>cell 1</strong></td><td colspan=2>span last 2 columns</td></tr><tr><td>&nbsp;</td><td colspan=2>span just last 2 columns</td></tr><tr><td colspan=3>span all columns</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| *cell 1* || cell 2 || cell 3
+|-
+| *cell 1* || span last 2 columns ||
+|-
+||| span just last 2 columns ||
+|-
+| span all columns ||||
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><td>cell 2</td><td>cell 3</td></tr><tr><th>cell 1</th><td colspan=2>span last 2 columns</td></tr><tr><td>&nbsp;</td><td colspan=2>span just last 2 columns</td></tr><tr><td colspan=3>span all columns</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| =cell 1 || cell 2 || cell 3
+|-
+| =cell 1 || span last 2 columns ||
+|-
+||| span just last 2 columns ||
+|-
+| span all columns ||||
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td><strong>cell 2</strong></td><td><strong>cell 3</strong></td></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td colspan=2>span last 2 columns</td></tr><tr><td>&nbsp;</td><td colspan=2>span just last 2 columns</td></tr><tr><td colspan=3>span all columns</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+| *cell 1* || *cell 2* || *cell 3*
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || span last 2 columns ||
+|-
+||| span just last 2 columns ||
+|-
+| span all columns ||||
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><th>cell 2</th><th>cell 3</th></tr><tr><td>cell 1</td><td>cell 2</td><td>cell 3</td></tr><tr><td>cell 1</td><td colspan=2>span last 2 columns</td></tr><tr><td>&nbsp;</td><td colspan=2>span just last 2 columns</td></tr><tr><td colspan=3>span all columns</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+| =cell 1 || =cell 2 || =cell 3
+|-
+| cell 1 || cell 2 || cell 3
+|-
+| cell 1 || span last 2 columns ||
+|-
+||| span just last 2 columns ||
+|-
+| span all columns ||||
+|-
+|}</pre></td></tr></table><h2 class="woas_heading" id="S18487">Styling table cells</h2>Definitions can be used within tables to style the cells. A definition affects only the cells <strong>following</strong> it. If you wish to apply the definition to the entire table, insert it directly beneath the table opening tag.<br /><h3 class="woas_heading" id="S71322">Method 1 - define styles in the wiki CSS</h3>This method requires that you add a custom "special" <a class="woas_link" title="WoaS::Help::CSS" href="woas__help__css.html">CSS rule</a> to the wiki so that any table cell in the "special" class will use that rule. See the <strong>table td.special</strong> rule in the <span class="woas_broken_link">custom CSS</span> used by this page for an example.<br /><br />You can add a "special" class definition by using <tt class="woas_nowiki">|$ class="special"</tt> in a table. The definition can be used by any row below the definition by adding <tt class="woas_nowiki">==</tt> before the contents of a cell.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td><strong>cell 2</strong></td><td><strong>cell 3</strong></td></tr><tr><td  class="special">cell 1</td><td>cell 2</td><td  class="special">cell 3</td></tr><tr><td>cell 1</td><td  class="special">cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+|$ class="special"
+|-
+| *cell 1* || *cell 2* || *cell 3*
+|-
+| ==cell 1 || cell 2 || ==cell 3
+|-
+| cell 1 || ==cell 2 || cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><th>cell 2</th><th>cell 3</th></tr><tr><td  class="special">cell 1</td><td>cell 2</td><td  class="special">cell 3</td></tr><tr><td>cell 1</td><td  class="special">cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+|$ class="special"
+|-
+| =cell 1 || =cell 2 || =cell 3
+|-
+| ==cell 1 || cell 2 || ==cell 3
+|-
+| cell 1 || ==cell 2 || cell 3
+|-
+|}</pre></td></tr></table><h3 class="woas_heading" id="S57450">Method 2 - define styles on the fly</h3>You can add a style definition by using <tt class="woas_nowiki">|$ style="CSSRULE"</tt> in a table. The definition can be used in any row below the definition by adding <tt class="woas_nowiki">==</tt> before the contents of a cell.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td><strong>cell 2</strong></td><td><strong>cell 3</strong></td></tr><tr><td  style="background:springgreen">cell 1</td><td>cell 2</td><td  style="background:springgreen">cell 3</td></tr><tr><td>cell 1</td><td  style="background:springgreen">cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+|$ style="background:springgreen"
+|-
+| *cell 1* || *cell 2* || *cell 3*
+|-
+| ==cell 1 || cell 2 || ==cell 3
+|-
+| cell 1 || ==cell 2 || cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><th>cell 2</th><th>cell 3</th></tr><tr><td  style="background:springgreen">cell 1</td><td>cell 2</td><td  style="background:springgreen">cell 3</td></tr><tr><td>cell 1</td><td  style="background:springgreen">cell 2</td><td>cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+|$ style="background:springgreen"
+|-
+| =cell 1 || =cell 2 || =cell 3
+|-
+| ==cell 1 || cell 2 || ==cell 3
+|-
+| cell 1 || ==cell 2 || cell 3
+|-
+|}</pre></td></tr></table><br />Multiple style definitions can be added to a table. The first definition can be used by adding <tt class="woas_nowiki">==</tt> before the contents of a cell. The second definition can be used by adding <tt class="woas_nowiki">===</tt> before the contents of a cell. The third definition can be used by adding <tt class="woas_nowiki">====</tt> before the contents of any cell. And so on.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td><strong>cell 2</strong></td><td><strong>cell 3</strong></td></tr><tr><td  style="background:springgreen">cell 1</td><td  style="background:#ff00ff">cell 2</td><td  style="background:cyan">cell 3</td></tr><tr><td  style="background:cyan">cell 1</td><td undefined>cell 2</td><td  style="background:#ff00ff">cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+|$ style="background:springgreen"
+|-
+|$ style="background:#ff00ff"
+|-
+|$ style="background:cyan"
+|-
+| *cell 1* || *cell 2* || *cell 3*
+|-
+| ==cell 1 || ===cell 2 || ====cell 3
+|-
+| ====cell 1 || =====cell 2 || ===cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><th>cell 2</th><th>cell 3</th></tr><tr><td  style="background:springgreen">cell 1</td><td  style="background:#ff00ff">cell 2</td><td  style="background:cyan">cell 3</td></tr><tr><td  style="background:cyan">cell 1</td><td undefined>cell 2</td><td  style="background:#ff00ff">cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+|$ style="background:springgreen"
+|-
+|$ style="background:#ff00ff"
+|-
+|$ style="background:cyan"
+|-
+| =cell 1 || =cell 2 || =cell 3
+|-
+| ==cell 1 || ===cell 2 || ====cell 3
+|-
+| ====cell 1 || =====cell 2 || ===cell 3
+|-
+|}</pre></td></tr></table><h3 class="woas_heading" id="S97079">Method 3 - combination of method 1 and method 2</h3>These examples use a combination of method 1 and method 2. The first definition can be used by adding <tt class="woas_nowiki">==</tt> before the contents of a cell. The second definition can be used by adding <tt class="woas_nowiki">===</tt> before the contents of a cell. The third definition can be used by adding <tt class="woas_nowiki">====</tt> before the contents of any cell. The fourth definition can be used by adding <tt class="woas_nowiki">=====</tt> before the contents of any cell. And so on.<br /><br /><table width="100%"><tr><td width="40%"><div class="woas_help_text">Example default table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table class="woas_text_area" ><tr><td><strong>cell 1</strong></td><td><strong>cell 2</strong></td><td><strong>cell 3</strong></td></tr><tr><td  class="special">cell 1</td><td  style="background:springgreen">cell 2</td><td  style="background:silver">cell 3</td></tr><tr><td  style="background:silver">cell 1</td><td  style="background:cyan">cell 2</td><td  style="background:springgreen">cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{|
+|-
+|$ class="special"
+|-
+|$ style="background:springgreen"
+|-
+|$ style="background:silver"
+|-
+|$ style="background:cyan"
+|-
+| *cell 1* || *cell 2* || *cell 3*
+|-
+| ==cell 1 || ===cell 2 || ====cell 3
+|-
+| ====cell 1 || =====cell 2 || ===cell 3
+|-
+|}</pre></td></tr><tr><td width="40%"><div class="woas_help_text">Example custom table:</div></td><td width="60%"><div class="woas_help_text">Use this code to create the table:</div></td></tr><tr><td valign="top"><table  class="mycustomtable"><tr><th>cell 1</th><th>cell 2</th><th>cell 3</th></tr><tr><td  class="special">cell 1</td><td  style="background:springgreen">cell 2</td><td  style="background:silver">cell 3</td></tr><tr><td  style="background:silver">cell 1</td><td  style="background:cyan">cell 2</td><td  style="background:springgreen">cell 3</td></tr></table></td><td valign="top"><pre class="woas_nowiki_multiline">{| class="mycustomtable"
+|-
+|$ class="special"
+|-
+|$ style="background:springgreen"
+|-
+|$ style="background:silver"
+|-
+|$ style="background:cyan"
+|-
+| =cell 1 || =cell 2 || =cell 3
+|-
+| ==cell 1 || ===cell 2 || ====cell 3
+|-
+| ====cell 1 || =====cell 2 || ===cell 3
+|-
+|}</pre></td></tr></table><h2 class="woas_heading" id="S77718">The CSS rules used by the example tables</h2>These are the custom CSS rules used by the example tables on this page:<br><br><pre class="woas_nowiki_multiline">/* CUSTOM CSS FOR custom tables */
+table.mycustomtable {
+	color: #404040;
+	background-color: #fafafa;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #6699CC;
+	font-family: Verdana, sans-serif, Arial;
+	font-size: 11px;
+	font-weight: normal;
+	/*UNCOMMENT THE WIDTH LINE BELOW TO CONTROL THE WIDTH OF THE TABLE*/
+	/*width: 500px;*/
+}
+caption.mycustomtable {
+	color: #404040;
+	border: 1px solid #6699CC;
+	text-align: center;
+	width: 580px;
+}
+table.mycustomtable th { 
+	color: #404040;
+	background-color: #BEC8D1;
+	border-bottom: 2px solid #6699CC;
+	border-left: 1px solid #6699CC;
+	font-weight: bold;
+	text-indent: 2px;
+}
+table.mycustomtable td {
+	color: #404040;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid #9CF;
+	border-left: 1px solid #9CF;
+	text-indent: 2px;
+}
+table.mycustomtable td.special {
+	background-color: #ff00ff;
+}
+
+/* CUSTOM CSS FOR DEFAULT TABLES */
+table td.special {
+	background-color: #ff00ff;
+}</pre><!-- NOTE: BELOW ARE CUSTOM CSS RULES EMBEDDED ON THIS PAGE FOR USE BY THIS PAGE. -->
+<style type="text/css">
+/* CUSTOM CSS FOR custom tables */
+table.mycustomtable {
+	color: #404040;
+	background-color: #fafafa;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #6699CC;
+	font-family: Verdana, sans-serif, Arial;
+	font-size: 11px;
+	font-weight: normal;
+	/*UNCOMMENT THE WIDTH LINE BELOW TO CONTROL THE WIDTH OF THE TABLE*/
+	/*width: 500px;*/
+}
+caption.mycustomtable {
+	color: #404040;
+	border: 1px solid #6699CC;
+	text-align: center;
+	width: 580px;
+}
+table.mycustomtable th { 
+	color: #404040;
+	background-color: #BEC8D1;
+	border-bottom: 2px solid #6699CC;
+	border-left: 1px solid #6699CC;
+	font-weight: bold;
+	text-indent: 2px;
+}
+table.mycustomtable td {
+	color: #404040;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid #9CF;
+	border-left: 1px solid #9CF;
+	text-indent: 2px;
+}
+table.mycustomtable td.special {
+	background-color: #ff00ff;
+}
+
+/* CUSTOM CSS FOR DEFAULT TABLES */
+table td.special {
+	background-color: #ff00ff;
+}
+</style>
+</div></div></div></body></html>
